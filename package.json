@@ -1,5 +1,5 @@
 {
-  "name": "angular2-typescript-boilerplate",
+  "name": "ng2-boilerplate",
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
@@ -12,41 +12,47 @@
   "keywords": [
     "angular2",
     "typescript",
-    "boilerplate",
-    "sc5"
+    "boilerplate"
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:SC5/angular2-typescript-boilerplate.git"
+    "url": "https://github.com/geversoncarvalho/ng2-boilerplate.git"
   },
   "bugs": {
-    "url": "https://github.com/SC5/angular2-typescript-boilerplate/issues"
+    "url": "https://github.com/geversoncarvalho/ng2-boilerplate/issues"
   },
-  "homepage": "https://github.com/SC5/angular2-typescript-boilerplate#readme",
+  "homepage": "https://github.com/geversoncarvalho/ng2-boilerplate#readme",
   "license": "MIT",
   "private": false,
-  "author": "SC5 <info@sc5.io>",
+  "author": "Geverson Carvalho <geverson.carvalho@outlook.com>",
   "dependencies": {
-    "angular2": "2.0.0-beta.7",
-    "systemjs": "0.19.22",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "zone.js": "0.5.15"
+    "@angular/core": "^2.4.3",
+    "rxjs": "^5.0.3",
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@types/angular2": "0.0.2",
     "@types/core-js": "^0.9.35",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.18",
+    "browser-sync": "^2.18.6",
     "concurrently": "^2.0.0",
     "css-loader": "^0.26.1",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-nodemon": "^2.2.1",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
     "lite-server": "^2.1.0",
+    "morgan": "^1.7.0",
+    "node-noop": "^1.0.0",
+    "nodemon": "^1.11.0",
     "style-loader": "^0.13.1",
     "ts-loader": "^1.3.3",
     "typescript": "^2.1.5",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "webpack-stream": "^3.2.0"
   }
 }
