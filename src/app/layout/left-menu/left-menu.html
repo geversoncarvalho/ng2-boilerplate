@@ -1,0 +1,8 @@
+<div class="left-menu">
+	<ul class="list-unstyled">
+		<li class="list-header"></li>
+		<li class="menu-item" *ngFor="let appRoute of routes">
+			<a [routerLink]="appRoute.path">{{appRoute.label}}</a>
+		</li>
+	</ul>
+</div>

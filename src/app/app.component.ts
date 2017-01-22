@@ -1,7 +1,17 @@
-import {Component} from "angular2/core";
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import './app.less';
 
 @Component({
-    selector: "app",
-    template: "<h1>AAasdsa...</h1>"
+    selector: 'app',
+    templateUrl: "./app.html"
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+    constructor(private route: ActivatedRoute) {
+        
+    }
+
+    ngOnInit() {
+        console.log('--->>>', this.route);
+    }
+ }

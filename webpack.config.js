@@ -1,6 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+ 
 
 module.exports = {
     entry: {
@@ -24,27 +28,33 @@ module.exports = {
                 loaders: ['ts-loader', 'angular2-template-loader']
             },
             {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
-            },
-            {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract('style', 'css!less?strictMath&noIeCompat')
+            },
+            { 
+                test: /\.(html|css)$/, 
+                loader: 'raw-loader'
             }
         ]
     },
     plugins: [
         //new webpack.optimize.UglifyJsPlugin(),
-        new ExtractTextPlugin("styles.bundle.css")
+        new ExtractTextPlugin("styles.bundle.css"),
+        new CopyWebpackPlugin([
+            {from: 'node_modules/bootstrap/dist/', to: '../libs/bootstrap/dist/'},
+        ]),
+        new HtmlWebpackPlugin({
+            filename: '../index.html',
+            template: 'src/index.html',
+            lib: ['bootstrap.css']
+        }),
+        new HtmlWebpackExternalsPlugin([
+            {
+                name: 'bootstrap.css',
+                url: '../libs/bootstrap/dist/css/bootstrap.min.css'
+            }
+        ], {
+            basedir: __dirname + '/build'
+        })
     ]
 };
-
-function isExternal(module) {
-    var userRequest = module.userRequest;
-
-    if (typeof userRequest !== 'string') {
-        return false;
-    }
-
-    return userRequest.indexOf('node_modules') >= 0;
-}

@@ -1,8 +1,12 @@
 import 'zone.js';
 import 'reflect-metadata';
-import {bootstrap}    from "angular2/platform/browser";
-import {AppComponent} from "./app.component";
+import {enableProdMode} from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-import './style.less'; 
+// enableProdMode();
 
-bootstrap(AppComponent);
+platformBrowserDynamic().bootstrapModule(AppModule);
+
+// import {AppComponent} from "./app.component";
+// bootstrap(AppComponent);

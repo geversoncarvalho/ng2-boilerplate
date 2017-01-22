@@ -1,5 +1,43 @@
-.body {
-  background: blue;
+html,
+body {
+  margin: 0;
+}
+.flex-content {
+  flex: 1;
+}
+.left-container {
+  width: 200px;
+  background: #ccc;
+}
+.left-menu {
+  width: 200px;
+}
+.left-menu ul {
+  margin: 0;
+}
+.left-menu ul > li.list-header {
+  height: 25px;
+}
+.left-menu ul > li.menu-item:hover {
+  background: #4f93ce;
+}
+.left-menu ul > li.menu-item:hover > a {
+  color: #fff;
+  text-decoration: none;
+}
+.left-menu ul > li.menu-item > a {
+  display: block;
+  padding: 0 10px;
+  line-height: 32px;
+  font-size: 16px;
+}
+.page-header {
+  position: relative;
+  width: 100%;
+  background: #4f93ce;
+}
+.page-header h1 {
+  float: left;
 }
 
 /*# sourceMappingURL=styles.bundle.css.map*/
