@@ -1,9 +1,13 @@
-<page-header></page-header>
-<div class="d-flex flex-row">
-	<div class="left-container">
-		<left-menu></left-menu>
-	</div>
-	<div class="right-content flex-content">
-		<router-outlet></router-outlet>
+<div class="page-header-wrapper">
+	<page-header></page-header>
+</div>
+<div class="page-body-wrapper">
+	<div class="d-flex flex-row">
+		<div class="left-container">
+			<left-menu></left-menu>
+		</div>
+		<div class="right-container flex-content">
+			<router-outlet></router-outlet>
+		</div>
 	</div>
 </div>

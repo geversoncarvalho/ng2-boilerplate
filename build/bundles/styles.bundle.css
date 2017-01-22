@@ -5,9 +5,29 @@ body {
 .flex-content {
   flex: 1;
 }
+.page-header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+}
+.page-body-wrapper {
+  display: flex;
+  height: 100%;
+  padding-top: 54px;
+}
+.page-body-wrapper > * {
+  width: 100%;
+}
 .left-container {
   width: 200px;
+  height: 100%;
   background: #ccc;
+}
+.right-container {
+  overflow: auto;
+  padding: 20px 10px;
 }
 .left-menu {
   width: 200px;
